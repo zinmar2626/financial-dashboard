@@ -104,10 +104,10 @@ export default function ProfitMarginChart({
           <YAxis
             type="category"
             dataKey="name"
-            tick={{ fill: "#64748b", fontSize: 12 }}
+            tick={{ fill: "#64748b", fontSize: 11 }}
             axisLine={{ stroke: "#e2e8f0" }}
             tickLine={false}
-            width={110}
+            width={100}
           />
           <Tooltip content={<CustomTooltip />} cursor={{ fill: "#f1f5f9" }} />
           <Bar dataKey="margin" radius={[0, 4, 4, 0]} barSize={28}>

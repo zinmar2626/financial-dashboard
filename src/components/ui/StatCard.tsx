@@ -69,7 +69,7 @@ export default function StatCard({
         </div>
       </div>
       <div
-        className={`text-2xl font-bold tracking-tight ${
+        className={`text-xl sm:text-2xl font-bold tracking-tight break-all ${
           negative ? "text-rose-600" : "text-slate-900"
         }`}
       >

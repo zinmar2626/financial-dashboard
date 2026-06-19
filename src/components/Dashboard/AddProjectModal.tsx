@@ -229,7 +229,7 @@ export default function AddProjectModal({
       />
 
       {/* Modal */}
-      <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-200 max-h-[90vh] flex flex-col">
+      <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-200 max-h-[90vh] flex flex-col mx-0 sm:mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-slate-100 flex-shrink-0">
           <div className="flex items-center gap-3">
