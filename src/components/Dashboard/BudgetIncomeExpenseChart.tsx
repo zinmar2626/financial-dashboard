@@ -108,7 +108,9 @@ export default function BudgetIncomeExpenseChart({
             <LabelList
               dataKey="value"
               position="top"
-              formatter={(v: number) => formatCurrencyShort(v)}
+              formatter={(v: unknown) =>
+                formatCurrencyShort(typeof v === "number" ? v : Number(v))
+              }
               style={{ fill: "#475569", fontSize: 12, fontWeight: 600 }}
             />
           </Bar>

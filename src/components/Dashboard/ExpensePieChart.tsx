@@ -28,16 +28,18 @@ function CustomTooltip({
   payload,
 }: {
   active?: boolean;
-  payload?: Array<{ name: string; value: number }>;
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+  payload?: Array<{ name: string; value: number; color?: string; payload?: any }>;
 }) {
   if (!active || !payload?.length) return null;
   const entry = payload[0];
+  const color = entry.color ?? entry.payload?.fill ?? "#6366f1";
   return (
     <div className="bg-white border border-slate-200 rounded-lg shadow-lg px-3 py-2 text-sm">
       <div className="flex items-center gap-2 mb-0.5">
         <span
           className="w-2.5 h-2.5 rounded-sm flex-shrink-0"
-          style={{ backgroundColor: entry.color }}
+          style={{ backgroundColor: color }}
         />
         <span className="font-medium text-slate-700">{entry.name}</span>
       </div>

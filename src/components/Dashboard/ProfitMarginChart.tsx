@@ -117,7 +117,9 @@ export default function ProfitMarginChart({
             <LabelList
               dataKey="margin"
               position="right"
-              formatter={(v: number) => `${v}%`}
+              formatter={(v: unknown) =>
+                `${typeof v === "number" ? v : Number(v)}%`
+              }
               style={{ fill: "#475569", fontSize: 12, fontWeight: 600 }}
             />
           </Bar>
